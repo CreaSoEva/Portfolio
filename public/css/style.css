@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Changa+One|Shrikhand');
+/*font-family: 'Shrikhand', cursive;
+font-family: 'Changa One', cursive;*/
+
+html,body,ul
+{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+    color: #9933CC;
+}
+
+#TitreHeader{
+       font-size: 50px;
+       margin-left: 10%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #9933CC;
+    border-width: 5px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #9933CC;
+    border-width: 0 0 5px 0;
+    border-radius: 20px;
+}
+
+/*Css Partie Menu de navigation*/
+.navstyle{
+    font-size: 30px;
+    padding: 1% 2% 1% 2%;
+}
+
+footer{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+}
+
+.fond{
+   color:#9933CC;  
+}
+
+.entourage{
+    background-color: #ffcc80;
+    color: #9933CC;
+    border: double 5px #9933CC ;
+    border-radius: 10px;
+}
+
+#menucourt
+{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #menucourt{
+    display: none;
+    }
+    #menularge{
+    display:block;
+    }
+}
+@media screen and (max-width: 767px) {
+    #menucourt{
+    display: block;
+    }
+    #menularge{
+    display:none;
+    }
+}
+
+
+/*Parametres responsive*/
+/* aussi *@media screen and (max-width: 640px) and (min-width: 300px)*/
+/*@media screen and (max-width: 640px)
+{*/
+ /* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { ... }
+*/
+/*// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }*/
+
+}

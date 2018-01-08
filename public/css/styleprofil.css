@@ -1,0 +1,50 @@
+body
+{	
+	background-image: url('../img/e1bee7.png');
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	margin:auto;
+}
+
+main
+{	background-image: url('../img/abstract-2740732_1920.png');
+	width: 98%;
+ 	margin: 10px auto;
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	font-family: 'Shrikhand', cursive;
+	opacity: 0.8;
+}
+
+.profilsection{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 30px;	
+}
+
+.decoration{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.corps{
+	padding: 5% 0 5% 0;
+}
+
+h2{
+	padding: 5% 0 5% 0;
+}
+
+.contenu{
+	padding: 10% 0 5% 0;
+}
+
+.coloris{
+	background-color:#e1bee7;
+}
+

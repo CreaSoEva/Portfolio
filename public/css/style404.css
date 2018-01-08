@@ -1,0 +1,34 @@
+body
+{ 
+  background-image: url('../img/e1bee7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin:auto;
+}
+
+main
+{ background-image: url('../img/cherry-1659762_1920.png');
+  width: 98%; 
+  margin: 10px auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Shrikhand', cursive; 
+  opacity: 0.6;
+}
+
+.centrage{
+  text-align: center;
+  padding: 5% 5% 5% 5%;
+}
+
+.taille1{
+  font-size: 200px;
+}
+
+.taille2{
+  font-size: 50px;
+}
