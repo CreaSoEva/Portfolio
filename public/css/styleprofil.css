@@ -32,16 +32,12 @@ main
     padding: 0;
 }
 
-.corps{
-	padding: 5% 0 5% 0;
-}
-
 h2{
 	padding: 5% 0 5% 0;
 }
 
 .contenu{
-	padding: 10% 0 5% 0;
+	padding: 10% 0% 5% 5%;
 }
 
 .coloris{
