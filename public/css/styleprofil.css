@@ -43,3 +43,17 @@ h2{
 	background-color:#e1bee7;
 }
 
+.inputbasic{
+	border: double 5px #9933CC ;
+	border-radius: 10px;
+	transition: all 0.5s ease;
+}
+.inputbasic:hover {
+	background-color:#e040fb;
+	color: #ffffff;
+}
+
+input{
+	padding: 2% 2% 2% 2%;
+}
+

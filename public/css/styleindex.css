@@ -25,6 +25,20 @@ main
   font-size: 600%;
 }
 
+.inputbasic{
+  border: double 5px #9933CC ;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.inputbasic:hover {
+  background-color:#e040fb;
+  color: #ffffff;
+}
+
+input{
+  padding: 2% 2% 2% 2%;
+}
+
 .hauteur{
   min-height: 600px;
 
@@ -206,7 +220,7 @@ main
   }
   .TitreCentral{
       padding:7% 15% 0% 15%;
-      font-size: 150%;
+      font-size: 250%;
     }
 }
 
@@ -216,7 +230,7 @@ main
     } 
     .TitreCentral{
       padding:7% 15% 0% 15%;
-      font-size: 100%;
+      font-size: 200%;
     }
 }
 

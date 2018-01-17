@@ -20,11 +20,11 @@
         <main>
             <header>
                 <p class="container">
-                    <article class="row col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <article class="row col-xs-5 col-sm-6 col-md-7 col-lg-8">
                         <h1 id="TitreHeader">CREASOEVA</h1>
                     </article>
 
-                    <article class="row col-xs-4 col-sm-4 col-md-4 col-lg-4 float-right navstyle">
+                    <article class="row col-xs-1 col-sm-2 col-md-3 col-lg-4 float-right navstyle">
                         <ul class="nav navbar-nav navbar-right links">                           
                         @auth
                             <li class="dropdown">
@@ -47,7 +47,7 @@
                                 </ul>
                             </li>
                         @else
-                            <li><a class="fond" href="{{ route('login') }}">Login</a></li> 
+                            <li><a class="fond" href="{{ route('login') }}"><i class="fa fa-user" aria-hidden="true"></i></a></li> 
                         @endauth
                         </ul>    
                     </article>
@@ -69,9 +69,10 @@
 
                <!--menu court  -->
 
-                <nav id="menucourt" class="btn-group container-fluid  center block"> 
+                <nav id="menucourt" class="btn-group container-fluid center block"> 
                     <button class="dropdown-toggle inputbasic" data-toggle="dropdown"><a class="fond" href="{{ url('/') }}">Home</button>
-                        <ul class="dropdown-menu entourage">    
+                        <ul class="dropdown-menu inputbasic">
+                            <li><a class="fond" href="{{ route('accueil') }}">Home</a></li>
                             <li><a class="fond" href="{{ route('profil') }}">About Me</a></li>
                             <li><a class="fond" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
@@ -83,12 +84,12 @@
  <!-- fin corps de page -->   
   <footer class="footer container-fluid text-center">
     <article class="container">
-      <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4 justify-content-center">&copy; CréaSoEva 2017</p>
-      <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4 justify-content-center" href="contact.php">Contact</p>
-      <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4 justify-content-center">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter"></i>
+      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center">&copy; CréaSoEva 2017</p>
+      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center"><a class="fond" href="{{ route('contact') }}">Contact</a></p>
+      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center">
+        <a href=""><i class="fab fa-github fond"></i></a>
+        <a href=""><i class="fab fa-facebook-square fond"></i></a>
+        <a href=""><i class="fab fa-twitter fond"></i></a>
       </p>
     </article>
   </footer>
