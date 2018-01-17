@@ -1,10 +1,14 @@
 @extends('layouts.app')
+@section('style')
+     <link href="{{ asset('css/styleindex.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
+<div class="container-fluid hauteur">
+    <div class="container">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="panel">
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">

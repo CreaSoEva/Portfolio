@@ -1,11 +1,10 @@
 body
 {	
 	background-image: url('../img/e1bee7.png');
-  	background-size: cover;
-  	background-position: center;
-  	background-repeat: no-repeat;
+  background-size: cover;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
 	width: 100%;
-	height: 100%;
 	margin:auto;
 }
 
@@ -13,15 +12,15 @@ main
 {	background-image: url('../img/abstract-2740732_1920.png');
 	width: 98%;
  	margin: 10px auto;
-  	background-size: cover;
-  	background-position: center;
-  	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 	font-family: 'Shrikhand', cursive;
 	opacity: 0.8;
 }
 
 .charte{
-   color: #903E6C;
+  color: #903E6C;
 }
 
 .position{
@@ -29,5 +28,5 @@ main
 }
 
 .entourage{
-    background-color: #ffcc80;
+   background-color: #ffcc80;
  }

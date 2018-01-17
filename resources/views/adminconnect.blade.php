@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('style')
+     <link href="{{ asset('css/adminconnect.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/styleindex.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
 

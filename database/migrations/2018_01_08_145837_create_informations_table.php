@@ -21,7 +21,7 @@ class CreateInformationsTable extends Migration
             $table->string('address');
             $table->integer('postcode');
             $table->string('city');
-            $table->integer('phone');
+            $table->string('phone');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

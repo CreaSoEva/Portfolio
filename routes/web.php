@@ -11,10 +11,17 @@
 |
 */
 
+
+// Routes publiques
+
 Route::get('/', 'PortfolioController@index')->name('accueil');
 Route::get('/profil', 'PortfolioController@profil')->name('profil');
 Route::get('/contact', 'PortfolioController@contact')->name('contact');
 
+// Routes d'identification
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route d'administration

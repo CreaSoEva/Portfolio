@@ -12,13 +12,7 @@
 
         <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!--link href="{{ asset('css/adminconnect.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admincontact.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/adminprojects.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/adminskills.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/adminstudies.css') }}" rel="stylesheet"-->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">    
 @yield('style')
       
     </head>
@@ -34,7 +28,7 @@
                         <ul class="nav navbar-nav navbar-right links">                           
                         @auth
                             <li class="dropdown">
-                                <a href="{{ url('/home') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a href="{{ url('/home') }}" class="dropdown-toggle fond" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -78,8 +72,8 @@
                 <nav id="menucourt" class="btn-group container-fluid  center block"> 
                     <button class="dropdown-toggle inputbasic" data-toggle="dropdown"><a class="fond" href="{{ url('/') }}">Home</button>
                         <ul class="dropdown-menu entourage">    
-                            <li><a class="fond" href="profil.php">About Me</a></li>
-                            <li><a class="fond" href="contact.php">Contact</a></li>
+                            <li><a class="fond" href="{{ route('profil') }}">About Me</a></li>
+                            <li><a class="fond" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                 </nav>
             </p>
@@ -87,7 +81,7 @@
    <!-- corps de page -->
 @yield('content')
  <!-- fin corps de page -->   
-  <footer class="footer container text-center">
+  <footer class="footer container-fluid text-center">
     <article class="container">
       <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4 justify-content-center">&copy; CréaSoEva 2017</p>
       <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4 justify-content-center" href="contact.php">Contact</p>
@@ -103,7 +97,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>   
 
     
 </body>
