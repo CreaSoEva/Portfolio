@@ -16,6 +16,8 @@
 
 Route::get('/', 'PortfolioController@index')->name('accueil');
 Route::get('/profil', 'PortfolioController@profil')->name('profil');
+
+					// Parametres pour l'envoi de mail
 Route::get('/contact', 'PortfolioController@contact')->name('contact');
 Route::post('/contact', 'PortfolioController@contact')->name('contact');
 

@@ -8,7 +8,8 @@
 <!-- début zone contact  -->
     <section class="situation col-xs-12 col-sm-12 col-md-12 col-lg-12">    
 
-      <form class= "style" method="post" action="">    
+      <form class= "style" method="post" action="">
+              {{ csrf_field() }}    
       	
       	<p class="row alignement">
           	<input type="text" name="nom" id="nom" placeholder="Votre Nom" class="row col-xs-5 col-sm-5 col-md-5 col-lg-5 float-left inputbasic" size="20" maxlength="30" />
