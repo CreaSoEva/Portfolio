@@ -40,13 +40,13 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
+                                         <a href="{{ route('home') }}">
+                                            Administration
+                                        </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('home')}}">Administration</a>
                                     </li>
                                 </ul>
                             </li>
@@ -58,17 +58,24 @@
                 </p> 
             </header>            
 
-           <p class="container">
+            <p class="container">
                 <hr class="style-seven">
             </p>
 
                 
             <p class="container">
-                        <!--début du menu de navigation  -->      
-                <nav  id="menularge" class="container col-xs-6 col-sm-6 col-md-6 col-lg-6 float-right navstyle">   
-                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-4" href="{{ route('accueil') }}">Home</a>   
-                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-4" href="{{ route('profil') }}">About Me</a>
-                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-4" href="{{ route('contact') }}">Contact</a> 
+
+                <!--début du menu de navigation  --> 
+
+                <nav  id="menularge" class="container inputbasic navstyleA">   
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('accueil') }}">Home</a>   
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('profil') }}">About Me</a>
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('contact') }}">Contact</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminprojects') }}">A-projects</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminstudies') }}">A-studies</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminskills') }}">A-skills</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('admininformations') }}">A-infos</a> 
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('admincontact') }}">A-contacts</a>       
                 </nav> 
 
                <!--menu court  -->
@@ -79,6 +86,12 @@
                             <li><a class="fond" href="{{ route('accueil') }}">Home</a></li>
                             <li><a class="fond" href="{{ route('profil') }}">About Me</a></li>
                             <li><a class="fond" href="{{ route('contact') }}">Contact</a></li>
+                            <li><a class="fond" href="{{ route('adminprojects') }}">A-projects</a></li>
+                            <li><a class="fond" href="{{ route('adminstudies') }}">A-studies</a></li>
+                            <li><a class="fond" href="{{ route('adminskills') }}">A-skills</a></li>
+                            <li><a class="fond" href="{{ route('admininformations') }}">A-infos</a></li>
+                            <li><a class="fond" href="{{ route('admincontact') }}">A-contacts</a></li>
+
                         </ul>
                 </nav>
             </p>

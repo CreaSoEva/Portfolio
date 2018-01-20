@@ -66,6 +66,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'api_token' => str_random(60), 
+                                              // Pour chaque nouvel utilisateur ça va creer un token de maniere aleatoire qui protege L'Api 
         ]);
     }
 }

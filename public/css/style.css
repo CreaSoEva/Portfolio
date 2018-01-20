@@ -46,6 +46,11 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     padding: 1% 2% 5% 2%;
 }
 
+.navstyleA{
+    font-size: 20px;
+    padding: 2% 2% 2% 2%;
+}
+
 footer{
     display: inline-block;
     vertical-align: top;

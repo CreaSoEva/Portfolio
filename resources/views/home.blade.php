@@ -1,17 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('style')
      <link href="{{ asset('css/styleindex.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+     
 @endsection
 
 @section('content')
-<div class="container-fluid hauteur">
+<section class="container-fluid hauteur">
     <div class="container">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel">
-                <div class="panel-heading">Dashboard</div>
+            <div class="justify-content-center">
+                <h1 class="fond panel-heading">Bienvenue sur votre Administration</h1>
 
-                <div class="panel-body">
+                <div class="fond panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -23,5 +24,6 @@
             </div>
         </div>
     </div>
-</div>
+    
+</section>
 @endsection

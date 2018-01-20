@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('style')
      <link href="{{ asset('css/styleindex.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -66,7 +66,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="fond">
+                                <button type="submit" class="inputbasic">
                                     Register
                                 </button>
                             </div>

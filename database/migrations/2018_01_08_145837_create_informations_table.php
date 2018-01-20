@@ -17,8 +17,7 @@ class CreateInformationsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('name');
-            $table->string('firstname');
-            $table->string('address');
+            $table->string('email')->unique();
             $table->integer('postcode');
             $table->string('city');
             $table->string('phone');

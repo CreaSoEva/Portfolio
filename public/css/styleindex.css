@@ -16,7 +16,7 @@ main
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Shrikhand', cursive;
-  opacity: 0.8; 
+  opacity: 0.7; 
 }
 
 .TitreCentral{
@@ -30,6 +30,7 @@ main
   border-radius: 10px;
   transition: all 0.5s ease;
 }
+
 .inputbasic:hover {
   background-color:#e040fb;
   color: #ffffff;
@@ -40,8 +41,7 @@ input{
 }
 
 .hauteur{
-  min-height: 600px;
-
+  min-height: 650px;
 }
 
 .imggrand{

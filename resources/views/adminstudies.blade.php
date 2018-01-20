@@ -1,24 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('style')
-     <link href="{{ asset('css/adminstudies.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
     
     <section class="container">
-      <h2 class="charte">Studies (liste)</h2>
-      <p class="col-xs-8 col-sm-8 col-md-8 col-lg-8 justify-content-center">
-        <article class="position"><h3>Nom: </h3><span class="charte"></span></article>
-        <article class="position"><h3>Description: </h3><span class="charte"></span></article>
-        <article class="position"><h3>Date d'entrée: </h3><span class="charte"></span></article> 
-        <article class="position"><h3>Date de sortie: </h3><span class="charte"></span></article>
-        <article class="position"><h3>Crée le: </h3><span class="charte"></span></article> 
-        <article class="position"><h3>Modifié le: </h3><span class="charte"></span></article>        
-      </p>
+      <h2 class="charte">Studies</h2>
+      <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-content-center">
+        
+        @foreach($studies as $study)
+        
+        <p class="position">
+          <h3>Numero d'enregistrement: </h3><span class="charte">{{ $study->id }} </span>  
+          <h3>Nom: </h3><span class="charte"> {{ $study->name }} </span>
+          <h3>Description: </h3><span class="charte"> {{ $study->description }} </span>
+          <h3>Date de début: </h3><span class="charte"> {{ $study->date_start }} </span>
+          <h3>Date de fin: </h3><span class="charte"> {{ $study->date_end }} </span>
+        </p>        
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Ajouter</button>
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Modifier</button>
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Supprimer</button></br>
 
-      <button class="btn entourage btn-lg col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-5" type="submit">Supprimer</button>
-      <button class="btn entourage btn-lg col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-5" type="submit">Modifier</button>
+        @endforeach
+
+      </article>
+
 
       
     </section>

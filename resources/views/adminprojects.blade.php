@@ -1,23 +1,34 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('style')
-     <link href="{{ asset('css/adminprojects.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
     
     <section class="container">
-      <h2 class="charte">Projets (liste)</h2>
-      <p class="col-xs-8 col-sm-8 col-md-8 col-lg-8 justify-content-center">
-        <article class="position"><h3>Nom: </h3><span class="charte"></span></article>
-        <article class="position"><h3>Type: </h3><span class="charte"></span></article>
-        <article class="position"><h3>Creé le: </h3><span class="charte"></span></article>       
-      </p>
+      <h2 class="charte">Projets</h2>
+      <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-content-center">
+        
+        @foreach($projets as $projet)
+        
+        <p class="position">
+          <h3>Numero d'enregistrement: </h3><span class="charte">{{ $projet->id }} </span>  
+          <h3>Titre: </h3><span class="charte"> {{ $projet->title }} </span>
+          <h3>Description: </h3><span class="charte"> {{ $projet->description }} </span>
+          <h3>Image: </h3><span class="charte"> {{ $projet->image }} </span>
+          <h3>Date du projet: </h3><span class="charte"> {{ $projet->date_projet }} </span>
+        </p>        
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Ajouter</button>
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Modifier</button>
+        <button class="btn entourage  col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Supprimer</button></br>
 
-      <button class="btn entourage btn-lg col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-5" type="submit">Supprimer</button>
-      <button class="btn entourage btn-lg col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-5" type="submit">Modifier</button>
+        @endforeach
+
+      </article>
+
 
       
     </section>
 
-@endsection    
+@endsection
