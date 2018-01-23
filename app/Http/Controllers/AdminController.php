@@ -8,53 +8,60 @@ use App\Models\Study;
 use App\Models\Information;
 use App\Models\Project;
 use App\Models\Contact;
+use App\Http\Request\SkillRequest;
+use App\Http\Request\StudyRequest;
+use App\Http\Request\InformationRequest;
+use App\Http\Request\ProjectRequest;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+
+                // Controller Routes de la lecture du contenu des tables
 
     public function adminstudies() 
     {
         $studies = Study::all();        
-        return view('adminstudies' , compact('studies'));
+        return view('admin/adminstudies' , compact('studies'));
     }
 
     public function adminskills() 
     {
         $skills = Skill::all();
-        return view('adminskills' , compact('skills'));
+        return view('admin/adminskills' , compact('skills'));
     }
 
     public function admininformations()
     {
         $informations = Information::all();
-        return view('admininformations' , compact('informations'));
+        return view('admin/admininformations' , compact('informations'));
     }
 
     public function admincontact()
     {
         $contacts = Contact::all();
-        return view('admincontact' , compact('contacts'));
+        return view('admin/admincontact' , compact('contacts'));
     }
 
     public function adminprojects()
     {
         $projets = Project::all();
-        return view('adminprojects' , compact('projets'));
+        return view('admin/adminprojects' , compact('projets'));
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
+                     // Controller Routes de la création d'un contenu  
+
+
+    // public function addadminstudies(Request $request)
+    // {
+    //     Study::create($request->except('_token', 'valider'));
+    //     return redirect('adminstudies')->with('message', 'La formation a bien été ajoutée');
+    // }
 
     public function store(Request $request)
     {
@@ -78,6 +85,11 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+                    // Controller Routes de la Modification et sauvegarde d'un contenu 
+
+
     public function edit($id)
     {
         //
@@ -101,8 +113,47 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+
+
+                 // Controller Routes de la Suppression d'un contenu 
+    public function destroyadminstudies($id)
+    {   
+        $supp = Study::where("id", "=" , $id)->delete();
+        return redirect('admin/adminstudies') -> with('success','Votre formation a bien été supprimée.');
+
     }
+
+    public function destroyadminskills($id)
+    {   
+        $supp = Skill::where("id", "=" , $id)->delete();
+        return redirect('admin/adminskills') -> with('success','Votre compétence a bien été supprimée.');
+
+    }
+
+    
+    public function destroyadmininformations($id)
+    {   
+        $supp = Information::where("id", "=" , $id)->delete();
+        return redirect('admin/admininformations') -> with('success','Votre information a bien été supprimée.');
+
+    }
+
+
+    public function destroyadminprojects($id)
+    {   
+        $supp = Project::where("id", "=" , $id)->delete();
+        return redirect('admin/adminprojects') -> with('success','Ve projet a bien été supprimé.');
+
+    }
+
+
+    public function destroyadmincontact($id)
+    {   
+        $supp = Contact::where("id", "=" , $id)->delete();
+        return redirect('admin/admincontact') -> with('success','Votre message a bien été supprimé.');
+
+    }
+
+
+
 }

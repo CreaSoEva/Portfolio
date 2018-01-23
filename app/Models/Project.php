@@ -8,7 +8,7 @@ class Project extends Model
 {
     protected $table = 'projects';
     protected $fillable = [
-        'title', 'description', 'image', 'date_projet'
+        'id_user','title', 'description', 'image', 'date_projet'
     ];
 }
 

@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       
 @yield('style')
@@ -35,7 +33,7 @@
                         @auth
                             <li class="dropdown">
                                 <a href="{{ url('/home') }}" class="dropdown-toggle fond" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }} 
                                 </a>
 
                                 <ul class="dropdown-menu">
@@ -70,7 +68,41 @@
                 <hr class="style-seven">
             </p>
 
-                
+             @auth
+             <p class="container">
+
+                <!--début du menu de navigation  --> 
+
+                <nav  id="menularge" class="container inputbasic navstyleA">   
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('accueil') }}">Home</a>   
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('profil') }}">About Me</a>
+                    <a class="charte col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('contact') }}">Contact</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminprojects') }}">A-projects</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminstudies') }}">A-studies</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('adminskills') }}">A-skills</a>
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('admininformations') }}">A-infos</a> 
+                    <a class="fond col-xs-4 col-sm-4 col-md-4 col-lg-3" href="{{ route('admincontact') }}">A-contacts</a>       
+                </nav> 
+
+               <!--menu court  -->
+
+                <nav id="menucourt" class="btn-group container-fluid center block"> 
+                    <button class="dropdown-toggle inputbasic" data-toggle="dropdown"><a class="fond" href="{{ url('/') }}"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu inputbasic">
+                            <li><a class="fond" href="{{ route('accueil') }}">Home</a></li>
+                            <li><a class="fond" href="{{ route('profil') }}">About Me</a></li>
+                            <li><a class="fond" href="{{ route('contact') }}">Contact</a></li>
+                            <li><a class="fond" href="{{ route('adminprojects') }}">A-projects</a></li>
+                            <li><a class="fond" href="{{ route('adminstudies') }}">A-studies</a></li>
+                            <li><a class="fond" href="{{ route('adminskills') }}">A-skills</a></li>
+                            <li><a class="fond" href="{{ route('admininformations') }}">A-infos</a></li>
+                            <li><a class="fond" href="{{ route('admincontact') }}">A-contacts</a></li>
+
+                        </ul>
+                </nav>
+            </p>
+
+             @else   
             <p class="container">
                         <!--début du menu de navigation  -->      
                 <nav  id="menularge" class="container col-xs-6 col-sm-6 col-md-6 col-lg-6 float-right navstyle">   
@@ -90,6 +122,7 @@
                         </ul>
                 </nav>
             </p>
+            @endauth
 
    <!-- corps de page -->
 @yield('content')
@@ -106,12 +139,12 @@
     </article>
   </footer>
   </main>
-  
+
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>   
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     
 </body>
 

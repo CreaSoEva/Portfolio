@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 @section('style')
      <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -19,9 +19,8 @@
           <h3>Code postal et Ville: </h3><span class="charte"> {{ $information->postcode }} {{ $information->city }}</span>
           <h3>Numero de téléphone: </h3><span class="charte"> {{ $information->phone }} </span>
         </p>        
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Ajouter</button>
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Modifier</button>
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Supprimer</button></br>
+        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Valider</button>
+        
 
         @endforeach
 
@@ -32,3 +31,4 @@
     </section>
 
 @endsection
+

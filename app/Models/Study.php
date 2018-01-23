@@ -8,7 +8,7 @@ class Study extends Model
 {
     protected $table = 'studies';
     protected $fillable = [
-        'name', 'description', 'date_start', 'date_end'
+        'id_user','name', 'description', 'date_start', 'date_end'
     ];
 }
 
