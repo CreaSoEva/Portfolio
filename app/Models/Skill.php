@@ -8,7 +8,7 @@ class Skill extends Model
 {
     protected $table = 'skills';
     protected $fillable = [
-        'id_user','image' , 'name', 'type'
+        'user_id','image' , 'name', 'type'
     ];
 }
 

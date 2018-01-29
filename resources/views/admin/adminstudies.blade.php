@@ -8,13 +8,13 @@
     
     <section class="container">
       <h2 class="charte">Studies</h2>
-      <div class="col-md-8 col-md-offset-2">
+      
           @if ($message = Session::get('success'))
-               <div class="alert alert-success charte">
+               <div class=" col-8 alert alert-success charte">
                    {{ $message }}
                </div>
            @endif
-      <div class="panel panel-default">
+      
       <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-content-center">
         
         @foreach($studies as $study)
@@ -26,9 +26,9 @@
           <h3>Date de début: </h3><span class="charte"> {{ $study->date_start }} </span>
           <h3>Date de fin: </h3><span class="charte"> {{ $study->date_end }} </span>
         </p>        
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Ajouter</button>
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2" type="submit">Modifier</button>
-        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2 delete" type="submit" href="{{ route('suppr_studies', array('id'=>$study->id))}}" id="{{ $study->id }}"">Supprimer</button></br>
+        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2 add" type="submit" href="{{ route('addadminstudies')}}">Ajouter</button>
+         <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2 edit" type="submit" href="{{route('modif_adminstudies', array('id'=>$study->id))}}" >Modifier</button> 
+        <button class="btn entourage hvr-float-shadow col-xs-2 col-sm-2 col-md-2 col-lg-2 m-lg-2 delete" type="submit" href="{{ route('suppr_studies', array('id'=>$study->id))}}" id="{{ $study->id }}">Supprimer</button></br>
 
 
         @endforeach

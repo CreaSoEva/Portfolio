@@ -23,12 +23,11 @@
     <section id="{{ (($index+1) % 3==0) ? 'firstligne' : 'twoligne' }}" class="container col-xs-10 col-sm-10 col-md-10 col-lg-10">
       <ul id="hexGrid">
         @endif
-        @endforeach
-
-        
-        <h1 class="col-xs-6 col-sm-6 col-md-6 col-lg-6 TitreCentral">
-        PoRtFoLiO</h1>
+        @endforeach        
       </ul>
+      <article class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <h1 class="TitreCentral">PoRtFoLiO</h1>
+      </article>
     </section>
 @endsection
 

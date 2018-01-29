@@ -8,6 +8,21 @@ $(document).ready (function(){
            document.location = $(this).attr("href");
        }
    });
+
+    $(".add").click(function(evt){
+    	evt.preventDefault();
+        if(confirm("Voulez vous vraiment ajouter un enregistrement ?")){
+            document.location=$(this).attr("href");   ;
+    	}
+    });
+
+    $(".edit").click(function(evt){
+    	evt.preventDefault();
+    	if(confirm("Voulez vous vraiment modifier cet enregistrement ?")){
+            document.location= $(this).attr("href");
+   		 }
+    });
 });
+
 
 

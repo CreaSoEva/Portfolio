@@ -8,7 +8,7 @@ class Information extends Model
 {
 	protected $table = 'informations';
     protected $fillable = [
-        'id_user','name', 'email', 'postcode', 'city' , 'phone'
+        'user_id','name', 'email', 'postcode', 'city' , 'phone'
     ];
 }
 

@@ -45,21 +45,22 @@ Route::middleware('auth')->get('/admin/add/addadminskills', 'AdminController@add
 Route::middleware('auth')->get('/admin/add/addadmininformations', 'AdminController@addadmininformations')->name('addadmininformations');
 Route::middleware('auth')->get('/admin/add/addadminprojects', 'AdminController@addadminprojects')->name('addadminprojects');
 
-Route::middleware('auth')->post('/admin/add/addadminstudies', 'AdminController@addadminstudies')->name('addadminstudies');
-Route::middleware('auth')->post('/admin/add/addadminskills', 'AdminController@addadminskills')->name('addadminskills');
-Route::middleware('auth')->post('/admin/add/addadmininformations', 'AdminController@addadmininformations')->name('addadmininformations');
-Route::middleware('auth')->post('/admin/add/addadminprojects', 'AdminController@addadminprojects')->name('addadminprojects');
+Route::middleware('auth')->post('/admin/add/addadminstudies', 'AdminController@goaddadminstudies')->name('goaddadminstudies');
+Route::middleware('auth')->post('/admin/add/addadminskills', 'AdminController@goaddadminskills')->name('goaddadminskills');
+Route::middleware('auth')->post('/admin/add/addadmininformations', 'AdminController@goaddadmininformations')->name('goaddadmininformations');
+Route::middleware('auth')->post('/admin/add/addadminprojects', 'AdminController@goaddadminprojects')->name('goaddadminprojects');
 
-                    // 3.Modifier le contenu des tables
-Route::middleware('auth')->get('/admin/edit/editadminstudies/{id}', 'AdminController@editadminstudies');
-Route::middleware('auth')->get('/admin/edit/editadminskills/{id}', 'AdminController@editadminskills');
-Route::middleware('auth')->get('/admin/edit/editadmininformations/{id}', 'AdminController@editadmininformations');
-Route::middleware('auth')->get('/admin/edit/editadminprojects/{id}', 'AdminController@editadminprojects');
+					// 3.Modifier le contenu des tables
 
-Route::middleware('auth')->post('/admin/edit/editadminstudies', 'AdminController@editadminstudies')->name('editadminstudies');
-Route::middleware('auth')->post('/admin/edit/editadminskills', 'AdminController@editadminskills')->name('editadminskills');
-Route::middleware('auth')->post('/admin/edit/editadmininformations', 'AdminController@editadmininformations')->name('editadmininformations');
-Route::middleware('auth')->post('/admin/edit/editadminprojects', 'AdminController@editadminprojects')->name('editadminprojects');
+Route::middleware('auth')->get('/admin/edit/editadminstudies/{id}', 'AdminController@editadminstudies')->name('modif_adminstudies');
+Route::middleware('auth')->get('/admin/edit/editadminskills/{id}', 'AdminController@editadminskills')->name('modif_adminskills');
+Route::middleware('auth')->get('/admin/edit/editadmininformations/{id}', 'AdminController@editadmininformations')->name('modif_admininformations');
+Route::middleware('auth')->get('/admin/edit/editadminprojects/{id}', 'AdminController@editadminprojects')->name('modif_adminprojects');
+
+Route::middleware('auth')->post('/admin/edit/editadminstudies', 'AdminController@saveeditadminstudies')->name('saveeditadminstudies');
+Route::middleware('auth')->post('/admin/edit/editadminskills', 'AdminController@saveeditadminskills')->name('saveeditadminskills');
+Route::middleware('auth')->post('/admin/edit/editadmininformations', 'AdminController@saveeditadmininformations')->name('saveeditadmininformations');
+Route::middleware('auth')->post('/admin/edit/editadminprojects', 'AdminController@saveeditadminprojects')->name('saveeditadminprojects');
 
                     // 4.Supprimer le contenu des tables
 Route::middleware('auth')->get('/admin/destroyadminstudies/{id}', 'AdminController@destroyadminstudies')->name('suppr_studies');
@@ -69,7 +70,3 @@ Route::middleware('auth')->get('/admin/destroyadminprojects/{id}', 'AdminControl
 Route::middleware('auth')->get('/admin/destroyadmincontact/{id}', 'AdminController@destroyadmincontact')->name('suppr_contact');
 
 
-// Route::get('/supprformation/{id}', 'AdminController@supprFormation')->name('suppr_formation');
-// Route::post('/formations', 'AdminController@addFormation');
-// Route::get('/modifformation/{id}', 'AdminController@modifFormation')->name('modif_formation');
-// Route::post('/modifformation', 'AdminController@updateFormation');
