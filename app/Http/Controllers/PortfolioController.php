@@ -38,4 +38,8 @@ class PortfolioController extends Controller
         Contact::create($infos);
         return redirect('contact')->with('message', 'Votre message a bien été envoyé');
     }
+
+    public function mentionslegales(){
+        return view('mentionslegales');
+    }
 }

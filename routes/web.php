@@ -16,6 +16,7 @@
 
 Route::get('/', 'PortfolioController@index')->name('accueil');
 Route::get('/profil', 'PortfolioController@profil')->name('profil');
+Route::get('/mentionslegales', 'PortfolioController@mentionslegales')->name('mentionslegales');
 
 					// Parametres pour l'envoi de mail
 Route::get('/contact', 'PortfolioController@formContact')->name('contact');
@@ -70,3 +71,4 @@ Route::middleware('auth')->get('/admin/destroyadminprojects/{id}', 'AdminControl
 Route::middleware('auth')->get('/admin/destroyadmincontact/{id}', 'AdminController@destroyadmincontact')->name('suppr_contact');
 
 
+app('debugbar')->disable();

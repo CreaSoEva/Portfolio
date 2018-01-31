@@ -22,6 +22,7 @@ $(document).ready (function(){
             document.location= $(this).attr("href");
    		 }
     });
+
 });
 
 

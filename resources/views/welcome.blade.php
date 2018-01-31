@@ -2,6 +2,7 @@
 @section('style')
     <link href="{{ asset('css/styleindex.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('lightbox2/css/lightbox.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <section id="firstligne" class="container col-xs-10 col-sm-10 col-md-10 col-lg-10">  
@@ -9,9 +10,8 @@
         @foreach($projets as $index=>$projet)
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="{{url('img/'.$projet->image)}}" >
-                <img src="{{url('img/'.$projet->image)}}" alt="Image"/>               
-                <h1>{{ $projet->title }}</h1>
+              <a class="hexLink" data-lightbox="projets" data-title="{{$projet->description}}" href="{{url('img/'.$projet->image)}}" >
+                <img src="{{url('img/'.$projet->image)}}" alt="Image"/>  <h1>{{ $projet->title }}</h1>
                 <p>{{ $projet->description }}</p>
               </a>
             </div>
@@ -31,5 +31,8 @@
     </section>
 @endsection
 
+@section('scripts')
+  <script src="{{ asset('lightbox2/js/lightbox.js') }}"></script>
+@endsection
 
 

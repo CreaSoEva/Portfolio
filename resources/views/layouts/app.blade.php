@@ -13,8 +13,6 @@
         <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       
 @yield('style')
@@ -28,7 +26,7 @@
                         <h1 id="TitreHeader">CREASOEVA</h1>
                     </article>
 
-                    <article class="row col-xs-1 col-sm-2 col-md-3 col-lg-4 float-right navstyle">
+                    <article class="row col-xs-3 col-sm-3 col-md-5 col-lg-4 float-right navstyle">
                         <ul class="nav navbar-nav navbar-right links">                           
                         @auth
                             <li class="dropdown">
@@ -129,12 +127,13 @@
  <!-- fin corps de page -->   
   <footer class="footer container text-center">
     <article class="container">
-      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center">&copy; CréaSoEva 2017</p>
-      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center"><a class="fond" href="{{ route('contact') }}">Contact</a></p>
-      <p class="col-xs-8 col-sm-8 col-md-6 col-lg-4 justify-content-center">
-        <a href=""><i class="fab fa-github fond"></i></a>
-        <a href=""><i class="fab fa-facebook-square fond"></i></a>
-        <a href=""><i class="fab fa-twitter fond"></i></a>
+      <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center">&copy; CréaSoEva 2017</p>
+      <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center"><a class="fond" href="{{ route('mentionslegales') }}">Mentions légales</a></p>
+      <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center"><a class="fond" href="{{ route('contact') }}">Contact</a></p>   
+      <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center">
+        <a href="https://github.com/CreaSoEva"><i class="fab fa-github fond"></i></a>
+        <a href="https://www.facebook.com/sophie.stike.7330"><i class="fab fa-facebook-square fond"></i></a>
+        <a href="https://twitter.com/SophieMendle"><i class="fab fa-twitter fond"></i></a>
       </p>
     </article>
   </footer>
@@ -145,7 +144,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" ></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    
+@yield('scripts')    
 </body>
 
  

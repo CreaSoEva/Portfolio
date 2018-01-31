@@ -10,7 +10,7 @@
       <h2 class="charte">Contacts</h2>
       <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-content-center">
         
-        @foreach($contacts as $contact)
+        @foreach($contact as $contacts)
         
         <p class="position">
           <h3>Numero d'enregistrement: </h3><span class="charte">{{ $c->id }} </span>  
