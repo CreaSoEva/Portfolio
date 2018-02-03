@@ -14,6 +14,7 @@ html,body,ul
 	margin: 0;
 	padding:0;
 	box-sizing: border-box;
+	
 }
 
 body
@@ -47,4 +48,8 @@ main
 
 .position{
 	padding-top: 2%;
+}
+
+.affichage{
+	font-size: 16px;
 }

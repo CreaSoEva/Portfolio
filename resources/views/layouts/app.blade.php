@@ -21,12 +21,12 @@
     <body>
         <main>
             <header>
-                <p class="container">
-                    <article class="row col-xs-5 col-sm-6 col-md-7 col-lg-8">
+                <p class="container-fluid">
+                    <article class="row col-xs-6 col-sm-6 col-md-7 col-lg-8">
                         <h1 id="TitreHeader">CREASOEVA</h1>
                     </article>
 
-                    <article class="row col-xs-3 col-sm-3 col-md-5 col-lg-4 float-right navstyle">
+                    <article class="row col-xs-8 col-sm-3 col-md-5 col-lg-4 float-right navstyle">
                         <ul class="nav navbar-nav navbar-right links">                           
                         @auth
                             <li class="dropdown">
@@ -126,7 +126,7 @@
 @yield('content')
  <!-- fin corps de page -->   
   <footer class="footer container text-center">
-    <article class="container">
+    <article class="container affichage">
       <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center">&copy; CréaSoEva 2017</p>
       <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center"><a class="fond" href="{{ route('mentionslegales') }}">Mentions légales</a></p>
       <p class="col-xs-8 col-sm-8 col-md-5 col-lg-3 justify-content-center"><a class="fond" href="{{ route('contact') }}">Contact</a></p>   

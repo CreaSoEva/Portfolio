@@ -51,6 +51,10 @@ input{
 	color:#64b5f6;
 }
 
+.blanc{
+	color:#ffffff;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */ 
 color: #64b5f6; 
 } 

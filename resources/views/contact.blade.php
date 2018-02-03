@@ -31,7 +31,7 @@
         <p class="container">
         	<p class="row alignement">
             <p><textarea type="text" name="contents" id="contents" placeholder="Votre Message" ROWS="10" cols="70" class="inputbasic col-xs-8 col-sm-8 col-md-8 col-lg-8"/></textarea></p>    	  
-      	    <p id="motAccueil" class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Si vous avez des questions,ou si vous voulez juste dire bonjour, n'hésitez pas à me contacter à mon email creasoeva03@gmail.com ou via le formulaire ci-contre.
+      	    <p id="motAccueil" class="col-xs-6 col-sm-6 col-md-4 col-lg-4 blanc">Si vous avez des questions,ou si vous voulez juste dire bonjour, n'hésitez pas à me contacter à mon email creasoeva03@gmail.com ou via le formulaire ci-contre.
             </p>
           </p>
         </p>
